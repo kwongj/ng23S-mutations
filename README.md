@@ -6,25 +6,25 @@ Identifies mutations in 1-4 copies of the 23S rRNA gene in Neisseria gonorrhoeae
 Jason Kwong (@kwongjc)
 
 ##Dependencies
-* [Snippy](https://github.com/tseemann/snippy)
+* Snippy (https://github.com/tseemann/snippy)
 * Python 2.7.x
 
 ##Usage
 
-1. Run snippy with Illumina reads for each *N. gonorrhoeae* query isolate. Use the reference genome NCCP11945 included in this repository. Note that this reference genome has been altered to mask 3 copies of the 23S rRNA gene to force mapping to a single region.
-```
-$ snippy --outdir snippy --ref NG_NCCP11945_23S-masked.gbk --R1 isolate_R1.fastq.gz --R2 isolate_R2.fastq.gz
-```
+1. Run [snippy](https://github.com/tseemann/snippy) with Illumina reads for each *N. gonorrhoeae* query isolate. Use the reference genome NCCP11945 included in this repository. Note that this reference genome has been altered to mask 3 copies of the 23S rRNA gene to force mapping to a single region.  
+  ```
+  $ snippy --outdir snippy --ref NG_NCCP11945_23S-masked.gbk --R1 isolate_R1.fastq.gz --R2 isolate_R2.fastq.gz
+  ```
+2. Run ng23S-mutations script. Results are printed to stdout.  
+  ```
+  $ ng23S-mutations.py snippy1 snippy2 ... snippyN
+  ```
+3. To save results to file:  
+  ```
+  $ ng23S-mutations.py snippy1 snippy2 ... snippyN > results.txt
+  ```
 
-2. Run ng23S-mutations script. Results are printed to stdout.
-```
-$ ng23S-mutations.py snippy1 snippy2 ... snippyN
-```
-To save results to file:
-```
-$ ng23S-mutations.py snippy1 snippy2 ... snippyN > results.txt
-```
-
+##Help menu
 
 ```
 $ ng23S-mutations.py -h
