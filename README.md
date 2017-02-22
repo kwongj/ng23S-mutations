@@ -31,7 +31,7 @@ $ ng23S-mutations.py -h
 usage: 
   ng23S-mutations.py <snippy1> <snippy2> ... <snippyN>
 
-Script to identify 23S mutations in NG
+Script to identify 23S mutations in NG (reports E.coli numbering)
 
 positional arguments:
   DIR              Snippy directories (required)

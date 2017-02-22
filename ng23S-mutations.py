@@ -17,7 +17,7 @@ from subprocess import Popen
 # Usage
 parser = argparse.ArgumentParser(
 	formatter_class=RawTextHelpFormatter,
-	description='Script to identify 23S mutations in NG',
+	description='Script to identify 23S mutations in NG (reports E.coli numbering)',
 	usage='\n  %(prog)s <snippy1> <snippy2> ... <snippyN>')
 parser.add_argument('snippy', metavar='DIR', nargs='+', help='Snippy directories (required)')
 parser.add_argument('--prefix', metavar='PREFIX', nargs=1, default='snps', help='Snippy .tab output prefix (default="snps")')
